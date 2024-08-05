@@ -14,6 +14,10 @@ class EmployeeSerializer(serializers.ModelSerializer):
         fields='__all__'
 
 class DepartmentSerializer(serializers.ModelSerializer):
+    
     class Meta:
         model=Department
         fields='__all__'
+
+
+      

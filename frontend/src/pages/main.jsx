@@ -2,8 +2,8 @@ import axios from 'axios'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import Nav from '../components/nav'
-import '../css/bootstrap.min.css'
+
+
 const Main = () => {
   const [data, setData] = useState({})
   //get employees from backend
@@ -20,11 +20,13 @@ const Main = () => {
 
 
 
-  return <div>
-    <Nav />
-
+  return <div >
+    
+    
     <div className="container fluid padding-10px border mt-2">
-      <h3>company employees</h3>
+      
+      <h3>All company employees</h3>
+      <span ><Link to={'/add-employee'} class='btn btn-primary text-light mb-2'>Add Employee</Link></span>
       <br />
 
 
@@ -48,7 +50,7 @@ const Main = () => {
 
                   <td>{dataitem.employee_contacts}</td>
                   <td>
-                    <div className="btn btn-outline-success"><Link>view</Link></div>
+                    <div className="btn btn-outline-success"><Link to={`/employee/${dataitem.id}`}>view</Link></div>
                   </td>
 
                 </tr>

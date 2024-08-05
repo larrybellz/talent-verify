@@ -1,7 +1,13 @@
 
-.nav{
 
-    
-
+.nav-ite{
+    padding:10px 10px
 }
-
+.current{
+    background:var(--cyan);
+  
+}
+.nav-item:hover{
+    background:var(--teal); 
+    
+}

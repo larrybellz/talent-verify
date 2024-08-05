@@ -10,12 +10,13 @@ class Employer(AbstractUser,PermissionsMixin):
     date_of_registration=models.DateField(null=True,blank=True)
     registration_number=models.CharField(max_length=50,null=True,blank=True)
     company_address=models.CharField(max_length=500)
+    token=models.CharField(max_length=250,blank=True,null=True)
    
 
  
 class Department(models.Model):
     
-    employer_id=models.ForeignKey(Employer,on_delete=models.CASCADE)
+    employer_id=models.ForeignKey(Employer,on_delete=models.CASCADE,null=True,blank=True)
     department_name=models.CharField(max_length=200)
 
     def __str__(self):

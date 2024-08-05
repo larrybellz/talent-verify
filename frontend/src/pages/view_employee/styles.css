@@ -1,0 +1,7 @@
+
+:root{
+    --bg-background:#20c997;
+}
+.card-bg{
+    background-color: var(--bg-background);
+}
